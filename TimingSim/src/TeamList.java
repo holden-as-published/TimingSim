@@ -28,7 +28,7 @@ public class TeamList {
     1,2,0,3, "fakeBarker");
 
     public static Team greatDefender = new Team (0,10,
-    1,2,6,4, "greatDefender");
+    1,2,4,5, "greatDefender");
 
 
 

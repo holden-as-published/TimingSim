@@ -80,7 +80,7 @@ public class Alliance {
                     if(isAmped)
                     {
                         if(printAllScoringEvents)
-                            System.out.println("teammate " + userAlliance[i] +" scored amped! at time " + time);
+                            System.out.println("teammate " + userAlliance[i].getName() +" scored amped! at time " + time);
                         
 
                         scoredSpeakerAmped++; 
@@ -92,7 +92,7 @@ public class Alliance {
                         scoredSpeakerUnamped++;
 
                         if(printAllScoringEvents)
-                            System.out.println("teammate " + userAlliance[i] + " scored unamped! at time " + time);
+                            System.out.println("teammate " + userAlliance[i].getName() + " scored unamped! at time " + time);
                         
 
                      }
@@ -186,7 +186,7 @@ public class Alliance {
                         hoardStack++; 
 
                         if(printAllScoringEvents)
-                        System.out.println("teammate " + userAlliance[i].getName() + " sent a piece to the hoard stack at time " + time +"  which is size " + hoardStack);
+                        System.out.println("teammate " + userAlliance[i].getName() + " sent a piece to the hoard stack at time " + time +"  which is size " + hoardStack + "under defebse from" + opposition.getName(i));
                     }
 
                 }
@@ -207,7 +207,7 @@ public class Alliance {
                            scoredSpeakerAmped++; 
    
                            if (printAllScoringEvents)
-                           System.out.println("teammate " + userAlliance[i].getName() +" scored amped! at time " + time);
+                           System.out.println("teammate " + userAlliance[i].getName() +" scored amped! at time " + time + "under defebse from" + opposition.getName(i));
    
    
                        }
@@ -307,7 +307,13 @@ public class Alliance {
     {
         return userAlliance[index].getSourceDefenseTime();
     }
+
+    public String getName(int index)
+    {
+        return userAlliance[index].getName();
+    }
 }
+
 
 
 

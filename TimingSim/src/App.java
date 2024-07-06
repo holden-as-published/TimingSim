@@ -13,7 +13,7 @@
  * 
  * ADJUSTMENTS
  * MakeDefenseDeterministic flag in team = randomizes source defense (plus minus 2 sec per cycle) and shot defense 0 or 1 sec when less than 3 sec of source defense
- * 
+ * Check Team for calculation of values based on team init parameters
  * 
  * 
  * 
@@ -35,18 +35,18 @@ public class App {
     
        
 
-        Alliance blueAlliance = new Alliance(TeamList.fakeCitrus, TeamList.exampleTeam, TeamList.greatDefender);
+        Alliance blueAlliance = new Alliance(TeamList.exampleTeam, TeamList.greatDefender, TeamList.dummyTeam);
 
         //Define Red Alliance. Teams always defend the opposing team in the same slot. 
 
         
-        Alliance redAlliance = new Alliance(TeamList.fakeBarker, TeamList.fakeCitrus, TeamList.fakeVikes);
+        Alliance redAlliance = new Alliance(TeamList.fakeBarker, TeamList.fakeVikes, TeamList.fakeCitrus);
 
         System.out.println("Alliances Built. Beginning Sim");
         
 
         System.out.println("Red Alliance has scored: " + redAlliance.simulate(120, blueAlliance));
-        //System.out.println("Blue Alliance has scored: " + blueAlliance.simulate(120, redAlliance));
+        System.out.println("Blue Alliance has scored: " + blueAlliance.simulate(120, redAlliance));
 
         System.out.println("Simulation Complete.");
 

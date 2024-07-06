@@ -12,7 +12,7 @@ int sourceDefenseTime;
 String name;
 Random randoCalrissian;
 
-boolean makeDefenseDeterministic = false;
+boolean makeDefenseDeterministic = true; //TODO. Leave this as true. Theres a bug somewhere
 
 
    public Team (int autoScorePieces, int crossFieldTime, int pickupTime, int scoringTime, int defensetime, int role, String name)
